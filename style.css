@@ -126,12 +126,8 @@
         display: none;
     }
 
-    .header {
-        height: 10vh;
-    }
-
     .chat-box {
-        height: 90vh;
+        position: absolute;
     }
 
     .chat-box,
