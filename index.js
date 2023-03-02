@@ -17,21 +17,17 @@ btn.addEventListener("click", function () {
         newDiv.innerHTML = `<p class='text-area'>${string}</p>`
         newDiv.setAttribute('class', 'received-chat')
         commentContainer.appendChild(newDiv)
-        // clear input box after button click
-        inputBox.value = "";
-        // scroll the chat to the bottom
-        commentContainer.scrollTop = commentContainer.scrollHeight;
     } else if (inputBox.value.trim() == "") {
         inputBox.value = "";
     } else {
         newDiv.innerHTML = `<p class='text-area'>${inputBox.value}</p>`
         newDiv.setAttribute('class', 'sent-chat')
         commentContainer.appendChild(newDiv)
-        // clear input box after button click
-        inputBox.value = "";
-        // scroll the chat to the bottom
-        commentContainer.scrollTop = commentContainer.scrollHeight;
     }
+    // clear input box after button click
+    inputBox.value = "";
+    // scroll the chat to the bottom
+    commentContainer.scrollTop = commentContainer.scrollHeight;
 })
 
 // on click of 'Enter' on keyboard

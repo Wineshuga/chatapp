@@ -122,8 +122,12 @@
         display: none;
     }
 
-    .chat-box::-webkit-scrollbar{
+    .chat-box::-webkit-scrollbar {
         display: none;
+    }
+
+    .chat-box {
+        height: calc(100vh - 6.5rem);
     }
 
     .chat-box,
