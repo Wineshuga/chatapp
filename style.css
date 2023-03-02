@@ -122,6 +122,10 @@
         display: none;
     }
 
+    .chat-box::-webkit-scrollbar{
+        display: none;
+    }
+
     .chat-box,
     .chat-input {
         margin: 6rem 0;
