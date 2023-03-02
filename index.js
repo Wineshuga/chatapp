@@ -1,5 +1,6 @@
 const inputBox = document.querySelector(".textbox");
 const btn = document.querySelector("#btn");
+const commentContainer = document.querySelector(".chat-box");
 
 /* 
 ** on click of button:
@@ -10,8 +11,7 @@ const btn = document.querySelector("#btn");
 **    is created and displays on the right of 'commentContainer'
 */
 btn.addEventListener("click", function () {
-    let newDiv = document.createElement('div')
-    let commentContainer = document.querySelector(".chat-box");
+    const newDiv = document.createElement('div')
     if (inputBox.value.charAt(0) === ':') {
         let string = inputBox.value.replace(':', '')
         newDiv.innerHTML = `<p class='text-area'>${string}</p>`
@@ -27,6 +27,8 @@ btn.addEventListener("click", function () {
         commentContainer.appendChild(newDiv)
         // clear input box after button click
         inputBox.value = "";
+        // scroll the chat to the bottom
+        commentContainer.scrollTop = commentContainer.scrollHeight;
     }
 })
 
