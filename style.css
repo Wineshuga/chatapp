@@ -122,22 +122,27 @@
         display: none;
     }
 
+    .header {
+        height: 5rem;
+    }
+
     .chat-box::-webkit-scrollbar {
         display: none;
     }
 
     .chat-box {
-        position: absolute;
+        margin: 5.5rem 0 4rem 0;
+        height: calc(100vh - 9rem);
     }
 
     .chat-box,
     .chat-input {
-        margin: 6rem 0;
         width: 100vw;
     }
 
     .chat-input {
-        margin-bottom: 0;
+        bottom: 0;
+        height: 4rem;
     }
 
     .sent-chat,
