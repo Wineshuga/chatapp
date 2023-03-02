@@ -126,8 +126,12 @@
         display: none;
     }
 
+    .header {
+        height: 15vh;
+    }
+
     .chat-box {
-        height: calc(100vh - 6.5rem);
+        height: 85vh;
     }
 
     .chat-box,
