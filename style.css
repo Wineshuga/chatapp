@@ -64,7 +64,7 @@
 
 .sent-chat,
 .received-chat {
-    width: 73vw;
+    width: 74vw;
     display: flex;
     flex-direction: column;
 }

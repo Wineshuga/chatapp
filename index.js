@@ -19,6 +19,8 @@ btn.addEventListener("click", function () {
         commentContainer.appendChild(newDiv)
         // clear input box after button click
         inputBox.value = "";
+        // scroll the chat to the bottom
+        commentContainer.scrollTop = commentContainer.scrollHeight;
     } else if (inputBox.value.trim() == "") {
         inputBox.value = "";
     } else {
