@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <title>ChatBox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>ChatBox</h1>
+    </header>
+    <main class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>Chats</h3>
+            </div>
+            <div class="sidebar-contents"></div>
+        </div>
+        <div class="chat-box">
+            <!-- contains divs from JS -->
+            <div class="chat-input">
+                <textarea type="text" placeholder="Message" class="textbox"></textarea>
+                <button id="btn">Send</button>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
