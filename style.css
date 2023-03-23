@@ -123,7 +123,7 @@
     }
 
     .header {
-        height: 10vh;
+        height: 5rem;
     }
 
     .chat-box::-webkit-scrollbar {
@@ -132,7 +132,7 @@
 
     .chat-box {
         margin: 5.5rem 0 4rem 0;
-        height: 85vh;
+        height: calc(100vh - 5rem);
     }
 
     .chat-box,
