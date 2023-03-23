@@ -1,7 +1,15 @@
 const inputBox = document.querySelector(".textbox");
 const btn = document.querySelector("#btn");
 const commentContainer = document.querySelector(".chat-box");
+let arrayOfTexts = []
 
+// get data from local storage
+const getLocalData = JSON.parse(localStorage.getItem('chat'))
+// a function to render stored data
+
+if (getLocalData) {
+    arrayOfTexts = getLocalData
+}
 /* 
 ** on click of button:
 ** 1. if user input contains only white spaces, no div is created
@@ -13,19 +21,22 @@ const commentContainer = document.querySelector(".chat-box");
 btn.addEventListener("click", function () {
     const newDiv = document.createElement('div')
     if (inputBox.value.charAt(0) === ':') {
-        let string = inputBox.value.replace(':', '')
-        newDiv.innerHTML = `<p class='text-area'>${string}</p>`
+        let typedString = inputBox.value.replace(':', '')
+        newDiv.innerHTML = `<p class='text-area'>${typedString}</p>`
         newDiv.setAttribute('class', 'received-chat')
         commentContainer.appendChild(newDiv)
+        arrayOfTexts.push(newDiv)
     } else if (inputBox.value.trim() == "") {
         inputBox.value = "";
     } else {
         newDiv.innerHTML = `<p class='text-area'>${inputBox.value}</p>`
         newDiv.setAttribute('class', 'sent-chat')
         commentContainer.appendChild(newDiv)
+        arrayOfTexts.push(newDiv)
     }
     // clear input box after button click
     inputBox.value = "";
+    localStorage.setItem('chat', JSON.stringify(arrayOfTexts))
     // scroll the chat to the bottom
     commentContainer.scrollTop = commentContainer.scrollHeight;
 })
